@@ -4,22 +4,10 @@
 import React, { Component, Children } from 'react';
 import Switch from "./Switch";
 
-
-function ToggleOn ({on, children}) {
-    return on ? children : null;
-}
-function ToggleOff ({on, children}) {
-    return on ? null : children;
-}
-
-function ToggleButton ({on, toggle, ...props}) {
-    return <Switch on={on} onClick={toggle} {...props} />
-}
-
 class Toggle extends Component {
-    static On = ToggleOn;
-    static Off = ToggleOff;
-    static Button = ToggleButton;
+    static On = ({on, children}) => {return on ? children : null};
+    static Off = ({on, children}) => {return on ? null : children};
+    static Button = ({on, toggle, ...props}) => {return <Switch on={on} onClick={toggle} {...props} />};
 
     static defaultProps = {
         onToggle: () => {}
