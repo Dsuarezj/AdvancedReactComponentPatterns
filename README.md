@@ -1,12 +1,12 @@
-#Advanced React Component Patterns
+# Advanced React Component Patterns
 
-##About
+## About
 
 Exercise made for the online course of Kent C. Dodds 
 
 more on: egghead.io
 
-##Install and start 
+## Install and start 
 Donwload the repository and run:
 
 `npm i`
